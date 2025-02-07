@@ -253,7 +253,7 @@
             // 
             guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
             guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.Image = Market_CRUD.Properties.Resources.images;
+            guna2ImageButton1.Image = Restaurant.Properties.Resources.images;
             guna2ImageButton1.ImageOffset = new Point(0, 0);
             guna2ImageButton1.ImageRotate = 0F;
             guna2ImageButton1.Location = new Point(12, 12);
