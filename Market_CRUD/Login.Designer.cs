@@ -31,8 +31,9 @@ namespace Presentation
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
+            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -43,7 +44,6 @@ namespace Presentation
             text_Passowrd = new TextBox();
             text_email = new TextBox();
             label1 = new Label();
-            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,10 +60,24 @@ namespace Presentation
             panel1.Controls.Add(btn_login);
             panel1.Controls.Add(text_Passowrd);
             panel1.Controls.Add(text_email);
-            panel1.Location = new Point(126, 136);
+            panel1.Location = new Point(108, 171);
             panel1.Name = "panel1";
             panel1.Size = new Size(343, 488);
             panel1.TabIndex = 0;
+            // 
+            // guna2ImageButton1
+            // 
+            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
+            guna2ImageButton1.ImageOffset = new Point(0, 0);
+            guna2ImageButton1.ImageRotate = 0F;
+            guna2ImageButton1.Location = new Point(127, 0);
+            guna2ImageButton1.Name = "guna2ImageButton1";
+            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            guna2ImageButton1.Size = new Size(80, 68);
+            guna2ImageButton1.TabIndex = 10;
             // 
             // label5
             // 
@@ -169,25 +183,11 @@ namespace Presentation
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(206, 21);
+            label1.Location = new Point(187, 60);
             label1.Name = "label1";
-            label1.Size = new Size(192, 70);
+            label1.Size = new Size(175, 70);
             label1.TabIndex = 1;
-            label1.Text = "Lig In";
-            // 
-            // guna2ImageButton1
-            // 
-            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
-            guna2ImageButton1.ImageOffset = new Point(0, 0);
-            guna2ImageButton1.ImageRotate = 0F;
-            guna2ImageButton1.Location = new Point(127, 0);
-            guna2ImageButton1.Name = "guna2ImageButton1";
-            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            guna2ImageButton1.Size = new Size(80, 68);
-            guna2ImageButton1.TabIndex = 10;
+            label1.Text = "LigIn";
             // 
             // Login
             // 

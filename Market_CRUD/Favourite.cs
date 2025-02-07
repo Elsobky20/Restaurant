@@ -29,7 +29,10 @@ namespace Presentation
             ProductService productService = new ProductService();
             var data = productService.getFavProduct(userId);
             dgv.DataSource = data;
+            dgv.Columns[4].Visible = false;
+            dgv.Columns[0].Visible = false;
         }
+        
 
         private void guna2GradientTileButton1_Click(object sender, EventArgs e)
         {
@@ -53,9 +56,12 @@ namespace Presentation
                 MessageBox.Show("Product Deleted from Fav Successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Text_product.Text = "";
                 Text_Category.Text = "";
+
                 
                 var DeletedFat = productService.getFavProduct(userId);
-                dgv.DataSource = data;
+                dgv.DataSource = DeletedFat;
+                dgv.Columns[4].Visible = false;
+                dgv.Columns[0].Visible = false;
 
             }
             else
@@ -67,7 +73,7 @@ namespace Presentation
         private void dgv_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-            productid = (int)dgv.SelectedRows[0].Cells["Prod_Id"].Value;
+            productid = (int)dgv.SelectedRows[0].Cells["Id"].Value;
             var productData = product.getOneProduct(productid);
             Text_product.Text = productData.Name.ToString();
             Text_Category.Text = productData.Ctg_Name.ToString();

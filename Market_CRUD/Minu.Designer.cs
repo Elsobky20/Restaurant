@@ -296,7 +296,7 @@
             // 
             // dgv
             // 
-            dgv.BackgroundColor = Color.Silver;
+            dgv.BackgroundColor = Color.White;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv.Location = new Point(50, 483);
             dgv.Name = "dgv";

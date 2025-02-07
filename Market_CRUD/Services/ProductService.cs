@@ -82,34 +82,41 @@ namespace Business.Services
                     {
                         Name = p.Name,
                         Ctg_Name = c.Name,
-                        ID = p.Id
+                        ID = p.Id,
+                        Price=p.Price
                     }).ToList();
         }
 
         public int AddProductFavourite(int User_Id, int Prod_Id)
         {
-            var userProduct = new UserProduct
+            if (User_Id !=0 &&Prod_Id !=0 )
             {
-                UserId = User_Id,
-                ProductId = Prod_Id
-            };
+                var userProduct = new UserProduct
+                {
+                    UserId = User_Id,
+                    ProductId = Prod_Id
+                };
 
-            dbContext.UserProducts.Add(userProduct);
-            return dbContext.SaveChanges(); 
+                dbContext.UserProducts.Add(userProduct);
+                return dbContext.SaveChanges();
+            }
+           return -1;
         }
 
 
 
         public int DeleteProductFavourite(int User_Id, int Prod_Id)
         {
-            var userProduct = dbContext.UserProducts.FirstOrDefault(up => up.UserId == User_Id && up.ProductId == Prod_Id);
-
-            if (userProduct != null)
+            if (User_Id != 0 && Prod_Id != 0)
             {
-                dbContext.UserProducts.Remove(userProduct);
-                return dbContext.SaveChanges(); 
-            }
+                var userProduct = dbContext.UserProducts.FirstOrDefault(up => up.UserId == User_Id && up.ProductId == Prod_Id);
 
+                if (userProduct != null)
+                {
+                    dbContext.UserProducts.Remove(userProduct);
+                    return dbContext.SaveChanges();
+                }
+            }
             return 0; 
         }
 
@@ -136,29 +143,10 @@ namespace Business.Services
                     {
                         Name = p.Name,
                         Ctg_Name = c.Name,
-                        ID = p.Id
+                        ID = p.Id ,
+                        Price = p.Price,
                     }).Distinct().ToList();
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -46,6 +46,8 @@ namespace Presentation
                 Dessert.BackColor = Color.Gainsboro;
                 var productData = product.getProducts();
                 dgv.DataSource = productData;
+                dgv.Columns[0].Visible = false;
+                dgv.Columns[4].Visible = false;
             }
             else
             {
@@ -65,6 +67,8 @@ namespace Presentation
                 Dessert.BackColor = Color.Gainsboro;
                 var productData = product.getProductCategort("Pizza");
                 dgv.DataSource = productData;
+                dgv.Columns[4].Visible = false;
+                dgv.Columns[0].Visible = false;
             }
             else
             {
@@ -85,6 +89,8 @@ namespace Presentation
                 Pizza.BackColor = Color.Gainsboro;
                 var productData = product.getProductCategort("Dessert");
                 dgv.DataSource = productData;
+                dgv.Columns[4].Visible = false;
+                dgv.Columns[0].Visible = false;
             }
             else
             {
@@ -105,6 +111,8 @@ namespace Presentation
                 Pizza.BackColor = Color.Gainsboro;
                 var productData = product.getProductCategort("Burger");
                 dgv.DataSource = productData;
+                dgv.Columns[4].Visible = false;
+                dgv.Columns[0].Visible = false;
             }
             else
             {
@@ -129,7 +137,7 @@ namespace Presentation
         private void dgv_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-            productid = (int)dgv.SelectedRows[0].Cells["Prod_Id"].Value;
+            productid = (int)dgv.SelectedRows[0].Cells["Id"].Value;
             var productData = product.getOneProduct(productid);
             Text_product.Text = productData.Name.ToString();
             Text_Category.Text = productData.Ctg_Name.ToString();

@@ -39,25 +39,35 @@ namespace Business.Services
             return dbContext.Users.FirstOrDefault(u => u.Email == user.Email && u.Password == user.Password);
         }
 
+        //public List<UserVM> GetAllUsers()
+        //{
+        //    return dbContext.Users.Select(u => new UserVM
+        //    {
+        //        Name = u.Name,
+        //        Email = u.Email,
+        //        Password = u.Password,
+        //    }).ToList();
+        //}
+
         public List<UserVM> GetAllUsers()
         {
-            return dbContext.Users.Select(u => new UserVM
+            using (var connection = new SqlConnection("Data Source=.;Initial Catalog=EF-Markert;Integrated Security=True;Encrypt=False"))
             {
-                Name = u.Name,
-                Email = u.Email,
-                Password = u.Password,
-            }).ToList();
-        }
+                string sql = @"SELECT Name, Email, Password FROM Users";
 
+                connection.Open();
+
+                var users = connection.Query<UserVM>(sql).ToList();
+
+                return users;
+            }
+        }
 
         public UserVM GetUserById(int id)
         {
             using (var connection = new SqlConnection("Data Source=.;Initial Catalog=EF-Markert;Integrated Security=True;Encrypt=False"))
             {
-                string sql = @"
-            SELECT Name, Email, Password
-            FROM Users
-            WHERE Id = @Id";
+                string sql = @"SELECT Name, Email, Password FROM Users WHERE Id = @Id";
 
                 connection.Open();
 
@@ -66,22 +76,7 @@ namespace Business.Services
                 return user;
             }
         }
-        //public UserVM GetUserById(int id)
-        //{
-        //    var user = dbContext.Users.FirstOrDefault(u => u.Id == id);
-
-        //    if (user != null)
-        //    {
-        //        return new UserVM
-        //        {
-        //            Name = user.Name,
-        //            Email = user.Email,
-        //            Password = user.Password ,
-        //        };
-        //    }
-
-        //    return null; 
-        //}
+        
 
         public int UpdateUser(UserVM userVM)
         {

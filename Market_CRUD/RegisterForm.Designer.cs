@@ -50,16 +50,16 @@
             panel1.Controls.Add(link_SignUp);
             panel1.Controls.Add(btnRegister);
             panel1.Controls.Add(txtFullName);
-            panel1.Location = new Point(131, 179);
+            panel1.Location = new Point(108, 171);
             panel1.Name = "panel1";
-            panel1.Size = new Size(343, 406);
+            panel1.Size = new Size(343, 452);
             panel1.TabIndex = 2;
             // 
             // txtEmail
             // 
             txtEmail.Cursor = Cursors.IBeam;
             txtEmail.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(51, 87);
+            txtEmail.Location = new Point(56, 109);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "Email";
             txtEmail.Size = new Size(221, 30);
@@ -67,7 +67,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(51, 146);
+            txtPassword.Location = new Point(56, 168);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Enter password";
             txtPassword.Size = new Size(221, 27);
@@ -76,7 +76,7 @@
             // 
             // txtConfirmPassword
             // 
-            txtConfirmPassword.Location = new Point(51, 202);
+            txtConfirmPassword.Location = new Point(56, 224);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.PlaceholderText = "Confirm password";
             txtConfirmPassword.Size = new Size(221, 27);
@@ -87,7 +87,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(51, 343);
+            label2.Location = new Point(56, 365);
             label2.Name = "label2";
             label2.Size = new Size(153, 17);
             label2.TabIndex = 6;
@@ -99,7 +99,7 @@
             link_SignUp.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             link_SignUp.LinkBehavior = LinkBehavior.HoverUnderline;
             link_SignUp.LinkColor = Color.DarkRed;
-            link_SignUp.Location = new Point(207, 341);
+            link_SignUp.Location = new Point(212, 363);
             link_SignUp.Name = "link_SignUp";
             link_SignUp.Size = new Size(54, 19);
             link_SignUp.TabIndex = 5;
@@ -112,9 +112,9 @@
             btnRegister.BackColor = Color.DarkRed;
             btnRegister.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(73, 266);
+            btnRegister.Location = new Point(56, 288);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(168, 42);
+            btnRegister.Size = new Size(221, 42);
             btnRegister.TabIndex = 2;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             // 
             txtFullName.Cursor = Cursors.IBeam;
             txtFullName.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtFullName.Location = new Point(51, 30);
+            txtFullName.Location = new Point(56, 52);
             txtFullName.Name = "txtFullName";
             txtFullName.PlaceholderText = "Name";
             txtFullName.Size = new Size(221, 30);
@@ -134,7 +134,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(170, 65);
+            label1.Location = new Point(145, 60);
             label1.Name = "label1";
             label1.Size = new Size(269, 70);
             label1.TabIndex = 3;

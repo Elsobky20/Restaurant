@@ -88,10 +88,10 @@
             // 
             dgv.BackgroundColor = Color.White;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Location = new Point(113, 387);
+            dgv.Location = new Point(36, 387);
             dgv.Name = "dgv";
             dgv.RowHeadersWidth = 51;
-            dgv.Size = new Size(302, 188);
+            dgv.Size = new Size(470, 188);
             dgv.TabIndex = 24;
             dgv.RowHeaderMouseDoubleClick += dgv_RowHeaderMouseDoubleClick;
             // 
@@ -120,7 +120,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Arial Narrow", 10.2F, FontStyle.Bold);
             label8.ForeColor = Color.DimGray;
-            label8.Location = new Point(36, 336);
+            label8.Location = new Point(36, 337);
             label8.Name = "label8";
             label8.Size = new Size(73, 22);
             label8.TabIndex = 22;

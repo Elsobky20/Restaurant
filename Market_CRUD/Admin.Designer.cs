@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             splitContainer1 = new SplitContainer();
             btn_logout = new Button();
@@ -43,6 +44,7 @@
             comboBox_Category = new ComboBox();
             textBox_name = new TextBox();
             dataGridView1 = new DataGridView();
+            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -64,6 +66,7 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.White;
+            splitContainer1.Panel1.Controls.Add(guna2ImageButton1);
             splitContainer1.Panel1.Controls.Add(btn_logout);
             splitContainer1.Panel1.Controls.Add(btn_Catigory);
             splitContainer1.Panel1.Controls.Add(btn_Products);
@@ -93,7 +96,7 @@
             btn_logout.FlatStyle = FlatStyle.Flat;
             btn_logout.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btn_logout.ForeColor = Color.DarkRed;
-            btn_logout.Location = new Point(12, 316);
+            btn_logout.Location = new Point(6, 548);
             btn_logout.Name = "btn_logout";
             btn_logout.Size = new Size(94, 29);
             btn_logout.TabIndex = 2;
@@ -107,7 +110,7 @@
             btn_Catigory.FlatStyle = FlatStyle.Flat;
             btn_Catigory.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btn_Catigory.ForeColor = Color.DarkRed;
-            btn_Catigory.Location = new Point(12, 190);
+            btn_Catigory.Location = new Point(6, 255);
             btn_Catigory.Name = "btn_Catigory";
             btn_Catigory.Size = new Size(94, 29);
             btn_Catigory.TabIndex = 1;
@@ -121,7 +124,7 @@
             btn_Products.FlatStyle = FlatStyle.Flat;
             btn_Products.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btn_Products.ForeColor = Color.DarkRed;
-            btn_Products.Location = new Point(12, 97);
+            btn_Products.Location = new Point(6, 162);
             btn_Products.Name = "btn_Products";
             btn_Products.Size = new Size(94, 29);
             btn_Products.TabIndex = 0;
@@ -238,13 +241,27 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(15, 424);
+            dataGridView1.Location = new Point(13, 427);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(440, 276);
+            dataGridView1.Size = new Size(450, 276);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.RowHeaderMouseDoubleClick += dataGridView1_RowHeaderMouseDoubleClick;
+            // 
+            // guna2ImageButton1
+            // 
+            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.Image = Market_CRUD.Properties.Resources.images;
+            guna2ImageButton1.ImageOffset = new Point(0, 0);
+            guna2ImageButton1.ImageRotate = 0F;
+            guna2ImageButton1.Location = new Point(12, 12);
+            guna2ImageButton1.Name = "guna2ImageButton1";
+            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ImageButton1.Size = new Size(80, 68);
+            guna2ImageButton1.TabIndex = 3;
             // 
             // Admin
             // 
@@ -284,5 +301,6 @@
         private ComboBox comboBox_Category;
         private TextBox textBox_name;
         private NumericUpDown numericUpDown_price;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }
